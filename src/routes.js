@@ -5,7 +5,7 @@ import {
     Route
 } from "react-router-dom";
 
-import TodoView from './views/todos/todoView';
+import Application from './views/application/application';
 import MainLayout from './layouts/mainLayout';
 
 export default function Routes(props) {
@@ -15,8 +15,8 @@ export default function Routes(props) {
             <div>
                 <Switch>
                     <MainLayout>
-                        <Route path="/todos">
-                            <TodoView />
+                        <Route path="/application">
+                            <Application />
                         </Route>
                     </MainLayout>
                 </Switch>

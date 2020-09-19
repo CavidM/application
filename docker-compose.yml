@@ -12,4 +12,7 @@ services:
             - type: bind
               source: .
               target: /application
+            - type: volume
+              source: ./node_modules/
+              target: /application/node_modules/
         stdin_open: true

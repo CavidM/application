@@ -4,10 +4,14 @@ WORKDIR /application
 
 COPY package.json /application/package.json
 
+COPY . /application
+
+RUN npm cache clean --force
+
 RUN npm install
 
-EXPOSE 3000
+RUN node node_modules/node-sass/scripts/install.js
 
-COPY . /application
+EXPOSE 3000
 
 CMD [ "npm", "start" ]
