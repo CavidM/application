@@ -1,0 +1,9 @@
+@import '~style/variables.scss';
+label {
+    font-size: 16px;
+    color: $dark-gray;
+}
+.form-control,
+select {
+    background-color: $light-gray;;
+}

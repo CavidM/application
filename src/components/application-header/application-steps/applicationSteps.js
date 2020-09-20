@@ -1,30 +1,53 @@
 import React from 'react';
 import './applicationSteps.scss';
+import {
+    BrowserRouter as Router,
+    useLocation
+} from "react-router-dom";
+
+
+const steps = {
+    'customer-information': 'MÜŞTƏRİ MƏLUMATI',
+    'user-information': 'İSTİFADƏÇİ MƏLUMATI',
+    'rights': 'HÜQUQLAR',
+    'confirmation': 'TƏSDİQ'
+};
 
 export default function ApplicationSteps() {
 
+    const location = useLocation();
+    const page = location.pathname.split('/')[2];
+
+    let pageComplete = 'complete';
+
+    const stepsComponent = Object.keys(steps).map(step => {
+
+        let current = '';
+
+        if (page === step) {
+            current = 'current';
+
+            // Stop adding the "complete" class to further pages
+            pageComplete = '';
+        }
+
+        return (
+            <div className={`col step pl-0 pr-0 ${pageComplete} ${current}`}>
+                <label>{steps[step]}</label>
+                <div className="line"></div>
+            </div>
+        );
+    });
+
     return (
         <React.Fragment>
-            <h1 className="application-title">ƏRİZƏ</h1>
-            <h2 className="application-title-label"> İnternet Bankçılıq xidmətinə qoşulma </h2>
+            <h1 className="application-title text-center">ƏRİZƏ</h1>
+            <h2 className="application-title-label text-center"> İnternet Bankçılıq xidmətinə qoşulma </h2>
 
-            <div className="row steps">
-                <div className="col step pl-0 pr-0 complete">
-                    <label>MÜŞTƏRİ MƏLUMATI</label>
-                    <div className="line"></div>
-                </div>
-                <div className="col step pl-0 pr-0">
-                    <label>İSTİFADƏÇİ MƏLUMATI</label>
-                    <div className="line"></div>
-                </div>
-                <div className="col step pl-0 pr-0">
-                    <label>HÜQUQLAR</label>
-                    <div className="line"></div>
-                </div>
-                <div className="col step pl-0 pr-0">
-                    <label>TƏSDİQ</label>
-                    <div className="line"></div>
-                </div>
+            <div className="row steps text-center">
+                
+                {stepsComponent}
+
             </div>
         </React.Fragment>
     );
