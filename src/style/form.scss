@@ -2,8 +2,19 @@
 label {
     font-size: 16px;
     color: $dark-gray;
+    margin-bottom: 5px;
 }
 .form-control,
 select {
-    background-color: $light-gray;;
+    background-color: $light-gray;
+    border-radius: 0;
+    border: 0;
+    font-size: 14px;
+}
+.next-step {
+    font-size: 18px;
+    padding: 6px 70px;
+}
+.step-navigation {
+    margin: 30px 0;
 }
