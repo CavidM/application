@@ -1,0 +1,28 @@
+@import '~style/variables.scss';
+.app-footer {
+    border-top: 1px solid $dark-gray-lighter;
+    padding-top: 15px;
+}
+.app-footer label,
+.app-footer p {
+    font-size: 11px;
+    color: $dark-gray-lighter;
+}
+.app-footer label {
+    margin-bottom: 10px;
+}
+.social-links li {
+    margin: 0 12px 0 0;
+    padding: 0;
+    border: 0;
+}
+.social-links a {
+    width: 19px;
+    height: 19px;
+    display: flex;
+    background-color: $light-gray-darker;
+    border-radius: 100%;
+}
+.social-links img {
+    margin: auto;
+}

@@ -1,3 +1,4 @@
+import AppFooter from 'components/app-footer/appFooter';
 import React from 'react';
 import AppHeader from '../components/app-header/appHeader';
 import './mainLayout.scss';
@@ -9,6 +10,8 @@ export default function MainLayout(props) {
             <AppHeader/>
 
             {props.children}
+
+            <AppFooter/>
         </div>
     );
 }
