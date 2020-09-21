@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from 'components/logo/logo';
 import AppLanguageBar from 'components/app-language-bar/appLanguageBar';
 
 export default function AppHeader() {
@@ -9,7 +8,7 @@ export default function AppHeader() {
 
             <div className="row justify-content-between">
                 <div className="col-auto">
-                    <Logo />
+                    <img src={`${process.env.PUBLIC_URL}/icons/logo/logo.svg`}/>
                 </div>
                 <div className="col-auto">
                     <AppLanguageBar />
