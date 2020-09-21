@@ -5,19 +5,23 @@ import {
 } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from 'react-redux';
-import { saveCustomerInformation } from 'store/actions/customerInformation';
+import { saveCustomerInformation } from 'store/actions/customerInformationAction';
 
 
 export default function CustomerInformationForm() {
 
     let history = useHistory();
-    const dispatch = useDispatch();
     const customerInformation = useSelector(state => state.customerInformation);
 
     const { register, handleSubmit, errors } = useForm();
 
-    const onSubmit = data => {
-        dispatch(saveCustomerInformation(data));
+    const onSubmit = async data => {
+        let res = await saveCustomerInformation(data);
+
+        if(res instanceof Error) {
+            return;
+        }
+
         history.push('/application/user-information');
     };
 
