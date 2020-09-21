@@ -6,7 +6,7 @@ import './mainLayout.scss';
 export default function MainLayout(props) {
 
     return (
-        <div className="app-wrapper container">
+        <div className="app-wrapper container-md">
             <AppHeader/>
 
             {props.children}

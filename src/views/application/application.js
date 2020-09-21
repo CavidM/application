@@ -16,14 +16,14 @@ export default function Application() {
             <div className="col-10">
                 <ApplicationSteps />
                 <Switch>
-                    <div className="step-container">
+                    {/* <div className="step-container"> */}
                         <Route path="/application/customer-information">
                             <CustomerInformationForm />
                         </Route>
                         <Route path="/application/user-information">
                             <UserInformation />
                         </Route>
-                    </div>
+                    {/* </div> */}
                 </Switch>
             </div>
         </div>

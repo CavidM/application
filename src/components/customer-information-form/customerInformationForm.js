@@ -4,7 +4,7 @@ import {
     useHistory
 } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { saveCustomerInformation } from 'store/actions/customerInformation';
 
 
@@ -12,20 +12,19 @@ export default function CustomerInformationForm() {
 
     let history = useHistory();
     const dispatch = useDispatch();
+    const customerInformation = useSelector(state => state.customerInformation);
 
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, errors } = useForm();
 
     const onSubmit = data => {
         dispatch(saveCustomerInformation(data));
         history.push('/application/user-information');
     };
 
-    console.log(errors);
-
     return (
         <React.Fragment>
             <div className="row justify-content-center">
-                <div className="col-xl-3 col-lg-4 col-md-5 col-6">
+                <div className="col-xl-4 col-lg-5 col-md-6 col-7">
                     <form>
                         <div class="form-group">
                             <label for="customer-code">Müştəri kodu</label>
@@ -33,6 +32,7 @@ export default function CustomerInformationForm() {
                                 class={`form-control ${errors?.customerCode ? `is-invalid` : ''}`}
                                 id="customer-code"
                                 name="customerCode"
+                                defaultValue={customerInformation?.customerCode}
                                 ref={register({
                                     required: { value: true, message: 'Bu xana vacibdi' },
                                     minLength: { value: 7, message: 'Ən azı 7 simvol daxil edin' },
@@ -51,6 +51,7 @@ export default function CustomerInformationForm() {
                                 class={`form-control ${errors?.customerName ? `is-invalid` : ''}`}
                                 id="customer-name"
                                 name="customerName"
+                                defaultValue={customerInformation.customerName}
                                 ref={register({
                                     required: { value: true, message: 'Bu xana vacibdi' },
                                 })} />
@@ -67,6 +68,7 @@ export default function CustomerInformationForm() {
                                 class={`form-control ${errors?.customerVoen ? `is-invalid` : ''}`}
                                 id="customer-voen"
                                 name="customerVoen"
+                                defaultValue={customerInformation.customerVoen}
                                 ref={register({
                                     required: { value: true, message: 'Bu xana vacibdi' },
                                 })} />
@@ -80,6 +82,7 @@ export default function CustomerInformationForm() {
                         <div class="form-group">
                             <label for="customer-branch">Filial</label>
                             <select name="customerBranch"
+                                defaultValue={customerInformation.customerBranch}
                                 class={`form-control ${errors?.customerBranch ? `is-invalid` : ''}`}
                                 ref={register({
                                     required: { value: true, message: 'Bu xana vacibdi' },
@@ -100,7 +103,7 @@ export default function CustomerInformationForm() {
                 </div>
             </div>
             <div className="row justify-content-between step-navigation">
-                <div className="col">
+                <div className="col pr-0">
                     <button
                         type="submit"
                         class="btn btn-primary float-right next-step"

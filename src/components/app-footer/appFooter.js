@@ -4,7 +4,7 @@ import './appFooter.scss';
 export default function AppFooter() {
 
     return (
-        <div className="app-footer container">
+        <div className="app-footer container-md">
 
             <div className="row">
                 <div className="col company-info">
