@@ -1,9 +1,9 @@
-export async function saveCustomerInformationService() {
+export async function saveUserService() {
 
     return new Promise((resolve, reject) => {
 
         setTimeout(() => {
-            return resolve('Customer information successfully saved');
+            return resolve('İstifadəçi yadda saxlanıldı');
         }, 0);
 
         //imitation of error

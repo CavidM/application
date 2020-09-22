@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import ApplicationSteps from 'components/application-header/application-steps/applicationSteps';
 import CustomerInformationForm from 'components/customer-information-form/customerInformationForm';
-import UserInformation from 'components/user-information/userInformation';
+import Users from 'components/users/users';
 import './application.scss';
 
 export default function Application() {
@@ -21,7 +21,7 @@ export default function Application() {
                             <CustomerInformationForm />
                         </Route>
                         <Route path="/application/user-information">
-                            <UserInformation />
+                            <Users />
                         </Route>
                     {/* </div> */}
                 </Switch>

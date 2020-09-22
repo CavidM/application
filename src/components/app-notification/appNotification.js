@@ -25,7 +25,7 @@ export default React.memo(function AppNotification() {
         removeNotification();
 
         showNotification = false;
-    }, 2500);
+    }, 2000);
 
     return (
         <div>

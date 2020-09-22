@@ -1,0 +1,38 @@
+@import '~style/variables.scss';
+
+.modal {
+    background-color: #00000080;
+}
+.modal-dialog {
+    max-width: 350px;
+}
+.modal-content {
+    border-radius: 10px;
+    border: 0;
+    padding: 7px 15px;
+}
+.modal-title {
+    font-size: 18px;
+    color: $dark-gray;
+}
+.modal-header {
+    border: 0;
+    padding-bottom: 5px;
+}
+.modal-header .close {
+    padding: 0px;
+    margin: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    display: flex;
+    border-radius: 100%;
+}
+.modal-header .close:focus {
+    outline: none;
+}
+.modal-header .close span {
+    margin: 8px auto;
+    font-size: 20px;
+    line-height: 0;
+}
