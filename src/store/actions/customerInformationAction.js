@@ -16,7 +16,7 @@ export async function saveCustomerInformation(data) {
 
         addNotification({
             type: SUCCESS,
-            message: 'Yadda saxlanıldı'
+            message: res
         })
 
         return res;

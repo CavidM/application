@@ -7,15 +7,20 @@ import {
 
 import Application from './views/application/application';
 import MainLayout from './layouts/mainLayout';
+import StartApplication from 'views/application/startApplication';
 
-export default function Routes(props) {
+export default function Routes() {
 
     return (
         <Router>
             <div>
                 <Switch>
                     <MainLayout>
-                        <Route path="/application">
+                        //Additional links for github page
+                        <Route exact path={["/", "/start", "/application", "/application/start"]}>
+                            <StartApplication />
+                        </Route>
+                        <Route path={["/application/customer-information", "/application/user-information"]}>
                             <Application />
                         </Route>
                     </MainLayout>

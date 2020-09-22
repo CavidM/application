@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
     Switch,
     Route
 } from "react-router-dom";
@@ -17,12 +16,12 @@ export default function Application() {
                 <ApplicationSteps />
                 <Switch>
                     {/* <div className="step-container"> */}
-                        <Route path="/application/customer-information">
-                            <CustomerInformationForm />
-                        </Route>
-                        <Route path="/application/user-information">
-                            <Users />
-                        </Route>
+                    <Route path="/application/customer-information">
+                        <CustomerInformationForm />
+                    </Route>
+                    <Route path="/application/user-information">
+                        <Users />
+                    </Route>
                     {/* </div> */}
                 </Switch>
             </div>

@@ -9,7 +9,7 @@ export default function AppFooter() {
             <div className="row">
                 <div className="col company-info">
                     <label>
-                        <img src={`${process.env.PUBLIC_URL}/icons/logo/logo-company-name.svg`} />
+                        <img alt="ATB" src={`${process.env.PUBLIC_URL}/icons/logo/logo-company-name.svg`} />
                     </label>
                     <p>
                         AR Mərkəzi Bankı tərəfindən "Azər-Türk Bank" ASC-yə 29.06.1995-ci il tarixində 234№-li lisenziya verilib

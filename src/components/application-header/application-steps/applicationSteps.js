@@ -1,7 +1,6 @@
 import React from 'react';
 import './applicationSteps.scss';
 import {
-    BrowserRouter as Router,
     useLocation
 } from "react-router-dom";
 
@@ -20,7 +19,7 @@ export default function ApplicationSteps() {
 
     let pageComplete = 'complete';
 
-    const stepsComponent = Object.keys(steps).map(step => {
+    const stepsComponent = Object.keys(steps).map((step, i) => {
 
         let current = '';
 
@@ -32,7 +31,7 @@ export default function ApplicationSteps() {
         }
 
         return (
-            <div className={`col step pl-0 pr-0 ${pageComplete} ${current}`}>
+            <div className={`col step pl-0 pr-0 ${pageComplete} ${current}`} key={i}>
                 <label>{steps[step]}</label>
                 <div className="line"></div>
             </div>

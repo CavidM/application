@@ -8,7 +8,7 @@ export default function AppHeader() {
 
             <div className="row justify-content-between">
                 <div className="col-auto">
-                    <img src={`${process.env.PUBLIC_URL}/icons/logo/logo.svg`}/>
+                    <img alt="ATB" src={`${process.env.PUBLIC_URL}/icons/logo/logo.svg`}/>
                 </div>
                 <div className="col-auto">
                     <AppLanguageBar />

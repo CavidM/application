@@ -29,9 +29,9 @@ export default React.memo(function AppNotification() {
 
     return (
         <div>
-            <div class={`alert alert-${notification.type} alert-dismissible fade show`} role="alert">
+            <div className={`alert alert-${notification.type} alert-dismissible fade show`} role="alert">
                 <strong>{notification.message}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close" onClick={removeNotification}>
+                <button type="button" className="close" data-dismiss="alert" aria-label="Close" onClick={removeNotification}>
                     <span aria-hidden="true">×</span>
                 </button></div>
         </div>

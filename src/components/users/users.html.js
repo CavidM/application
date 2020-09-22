@@ -1,5 +1,5 @@
 import UserInformationForm from 'components/userInformationForm/userInformationForm';
-import UserInformationFormModal from 'components/userInformationForm/userInformationFromModal';
+import UserInformationFormModal from 'components/userInformationForm/userInformationFormModal';
 import React from 'react';
 import './users.scss';
 
@@ -10,7 +10,8 @@ export default function UsersHtml({ goBack, showUserFormModal, setShowUserFormMo
         let userSmsOtp = user.userSmsOtp ? '✓' : '';
 
         return (
-            <tr>
+            // must be uuid
+            <tr key={i}>
                 <th>{++i}</th>
                 <td>{user.userName}</td>
                 <td>{user.userPhinCode}</td>
@@ -55,12 +56,12 @@ export default function UsersHtml({ goBack, showUserFormModal, setShowUserFormMo
                 <UserInformationForm setShowUserFormModal={setShowUserFormModal} />
             </UserInformationFormModal>
 
-            <div class="row justify-content-between step-navigation">
-                <div class="col pl-0">
-                    <button type="submit" class="btn btn-light float-left next-step" onClick={goBack}>Geri</button>
+            <div className="row justify-content-between step-navigation">
+                <div className="col pl-0">
+                    <button type="submit" className="btn btn-light float-left next-step" onClick={goBack}>Geri</button>
                 </div>
-                <div class="col pr-0">
-                    <button type="submit" class="btn btn-primary float-right next-step">İrəli</button>
+                <div className="col pr-0">
+                    <button type="submit" className="btn btn-primary float-right next-step">İrəli</button>
                 </div>
             </div>
         </div>

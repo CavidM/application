@@ -9,6 +9,7 @@ const options = langs.map(lang => ({
     label: (
         <div className="options">
             <img
+                alt={lang}
                 src={`${process.env.PUBLIC_URL}/icons/country/${lang}.svg`}
                 className="country-icon">
             </img>
