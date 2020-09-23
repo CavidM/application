@@ -5,7 +5,6 @@
   "homepage": "http://cavidm.github.io/application",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.2",
@@ -43,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^11.0.4",
     "gh-pages": "^3.1.0"
   }
 }

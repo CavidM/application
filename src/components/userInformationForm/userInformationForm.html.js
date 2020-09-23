@@ -14,6 +14,7 @@ export default function UserInformationFormHtml({ register, handleSubmit, onSubm
                                 className={`form-control ${errors?.userName ? `is-invalid` : ''}`}
                                 id="userName"
                                 name="userName"
+                                data-testid="user-name"
                                 ref={register({
                                     required: { value: true, message: 'Bu xana vacibdi' },
                                 })} />
@@ -30,6 +31,7 @@ export default function UserInformationFormHtml({ register, handleSubmit, onSubm
                                 className={`form-control ${errors?.userPhinCode ? `is-invalid` : ''}`}
                                 id="user-phin-code"
                                 name="userPhinCode"
+                                data-testid="user-phin-code"
                                 ref={register({
                                     required: { value: true, message: 'Bu xana vacibdi' },
                                 })} />
@@ -46,6 +48,7 @@ export default function UserInformationFormHtml({ register, handleSubmit, onSubm
                                 className={`form-control ${errors?.userEmail ? `is-invalid` : ''}`}
                                 id="user-email"
                                 name="userEmail"
+                                data-testid="user-email"
                                 ref={register({
                                     required: { value: true, message: 'Bu xana vacibdi' },
                                     pattern: {
@@ -65,6 +68,7 @@ export default function UserInformationFormHtml({ register, handleSubmit, onSubm
                             <input type="text"
                                 name="userCodeName"
                                 id="user-code-name"
+                                data-testid="user-code-name"
                                 className={`form-control ${errors?.userCodeName ? `is-invalid` : ''}`}
                                 ref={register({
                                     required: { value: true, message: 'Bu xana vacibdi' },
@@ -83,6 +87,7 @@ export default function UserInformationFormHtml({ register, handleSubmit, onSubm
                                 className={`form-control ${errors?.userPhone ? `is-invalid` : ''}`}
                                 id="user-phone"
                                 name="userPhone"
+                                data-testid="user-phone"
                                 ref={register({
                                     required: { value: true, message: 'Bu xana vacibdi' },
                                     pattern: {
@@ -102,6 +107,7 @@ export default function UserInformationFormHtml({ register, handleSubmit, onSubm
                                 className="form-check-input"
                                 id="user-sms-otp"
                                 name="userSmsOtp"
+                                data-testid="user-sms-otp"
                                 ref={register()}
                             />
                             <label className="form-check-label" htmlFor="user-sms-otp">SMS OTP</label>
@@ -110,6 +116,7 @@ export default function UserInformationFormHtml({ register, handleSubmit, onSubm
                         <button
                             type="submit"
                             className="btn btn-primary btn-block"
+                            data-testid="submit-new-user-form"
                             onClick={handleSubmit(onSubmit)}>
                             Əlavə et
                         </button>

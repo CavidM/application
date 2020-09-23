@@ -36,6 +36,7 @@ export default function CustomerInformationForm() {
                                 className={`form-control ${errors?.customerCode ? `is-invalid` : ''}`}
                                 id="customer-code"
                                 name="customerCode"
+                                data-testid="customer-code"
                                 defaultValue={customerInformation?.customerCode}
                                 ref={register({
                                     required: { value: true, message: 'Bu xana vacibdi' },
@@ -44,7 +45,7 @@ export default function CustomerInformationForm() {
                                 })} />
                             {
                                 errors?.customerCode ?
-                                    (<div className="invalid-feedback">
+                                    (<div className="invalid-feedback" data-testid="error">
                                         {errors.customerCode.message}
                                     </div>) : null
                             }
@@ -55,13 +56,14 @@ export default function CustomerInformationForm() {
                                 className={`form-control ${errors?.customerName ? `is-invalid` : ''}`}
                                 id="customer-name"
                                 name="customerName"
+                                data-testid="customer-name"
                                 defaultValue={customerInformation.customerName}
                                 ref={register({
                                     required: { value: true, message: 'Bu xana vacibdi' },
                                 })} />
                             {
                                 errors?.customerName ?
-                                    (<div class="invalid-feedback">
+                                    (<div className="invalid-feedback">
                                         {errors.customerName.message}
                                     </div>) : null
                             }
@@ -72,13 +74,14 @@ export default function CustomerInformationForm() {
                                 className={`form-control ${errors?.customerVoen ? `is-invalid` : ''}`}
                                 id="customer-voen"
                                 name="customerVoen"
+                                data-testid="customer-voen"
                                 defaultValue={customerInformation.customerVoen}
                                 ref={register({
                                     required: { value: true, message: 'Bu xana vacibdi' },
                                 })} />
                             {
                                 errors?.customerVoen ?
-                                    (<div class="invalid-feedback">
+                                    (<div className="invalid-feedback">
                                         {errors.customerVoen.message}
                                     </div>) : null
                             }
@@ -90,7 +93,8 @@ export default function CustomerInformationForm() {
                                 className={`form-control ${errors?.customerBranch ? `is-invalid` : ''}`}
                                 ref={register({
                                     required: { value: true, message: 'Bu xana vacibdi' },
-                                })} >
+                                })} 
+                                data-testid="branches">
                                 <option value="">Siyahıdan seçin</option>
                                 <option value="1">Neftçilər</option>
                                 <option value="2">Azadlıq</option>
@@ -111,7 +115,9 @@ export default function CustomerInformationForm() {
                     <button
                         type="submit"
                         className="btn btn-primary float-right next-step"
-                        onClick={handleSubmit(onSubmit)}>
+                        onClick={handleSubmit(onSubmit)}
+                        data-testid="submit-customer-info"
+                        >
                         İrəli
                     </button>
                 </div>

@@ -16,8 +16,8 @@ export default function Routes() {
             <div>
                 <Switch>
                     <MainLayout>
-                        //Additional links for github page
-                        <Route exact path={["/", "/start", "/application", "/application/start"]}>
+                        {/* {Additional links for github page} */}
+                        <Route exact path={["/", "/application"]}>
                             <StartApplication />
                         </Route>
                         <Route path={["/application/customer-information", "/application/user-information"]}>

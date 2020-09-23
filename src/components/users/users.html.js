@@ -39,14 +39,14 @@ export default function UsersHtml({ goBack, showUserFormModal, setShowUserFormMo
                         <th>SMS OTP</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody data-testid="users">
                     {usersComponent}
                 </tbody>
             </table>
 
             <div className="row">
                 <div className="col text-center">
-                    <button className="btn btn-light" onClick={() => { setShowUserFormModal('show') }}>
+                    <button className="btn btn-light" data-testid="open-user-form-modal" onClick={() => { setShowUserFormModal('show') }}>
                         Yeni istifadəçi əlavə et
                     </button>
                 </div>
