@@ -8,11 +8,8 @@ services:
         container_name: web
         ports:
             - "3000:3000"
-        volumes:
-            - type: bind
-              source: .
-              target: /application
-            - type: volume
-              source: ./node_modules/
-              target: /application/node_modules/
+        # volumes:
+            # - type: bind
+            #   source: .
+            #   target: /application
         stdin_open: true

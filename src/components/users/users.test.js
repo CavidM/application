@@ -37,7 +37,7 @@ jest.spyOn(userService, 'saveUserService')
 
 afterEach(() => cleanup())
 
-test.only('Must create new user', async () => {
+test('Must create new user', async () => {
 
     const { getByTestId } = wrapper;
 
